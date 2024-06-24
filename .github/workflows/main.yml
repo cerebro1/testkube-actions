@@ -1,0 +1,19 @@
+name: Robot test with Testkube
+on:
+  pull_request: 
+
+jobs:
+  testkube-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        
+      - uses: kubeshop/setup-testkube@v1
+        with:
+          organization: tkcenv_94cb6305570f69bd
+          environment: tkcorg_b8ddc820d4919590
+          token: tkcapi_586f8496b4997f0ba7a2836c7d9a37
+
+  - run: |
+      testkube run testworkflow basic-acceptance-test

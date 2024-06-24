@@ -1,6 +1,7 @@
 name: Robot test with Testkube
 on:
-  pull_request: 
+  push:
+  branches: [ "main" ] 
 
 jobs:
   testkube-test:

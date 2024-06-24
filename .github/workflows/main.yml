@@ -16,4 +16,4 @@ jobs:
           environment: tkcenv_94cb6305570f69bd
           token: tkcapi_586f8496b4997f0ba7a2836c7d9a37
 
-      - run: testkube run testworkflow basic-acceptance-test
+      - run: testkube run testworkflow basic-acceptance-test -f

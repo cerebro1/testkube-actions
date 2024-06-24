@@ -1,7 +1,7 @@
 name: Robot test with Testkube
 on:
   push:
-  branches: [ "main" ] 
+    branches: [ "main" ] 
 
 jobs:
   testkube-test:

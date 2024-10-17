@@ -1,4 +1,4 @@
-```name: Ephemeral Test Using Testkube
+name: Ephemeral Test Using Testkube
 on:
   pull_request: 
 

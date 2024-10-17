@@ -1,6 +1,12 @@
 # testkube-actions
 Testkube integration with Github Action for k6 test.
 
+Pre-requisites
+- GitHub account & repository with GitHub Actions enabled.
+- Kubernetes cluster
+- Testkube Agent configured on the cluster.
+- Testkube Agent ID, API token, Org ID, and Environment ID
+
 This actions workflow:
 
 
@@ -10,5 +16,5 @@ This actions workflow:
 - The first few lines of the file define a new PR, which triggers all of this.
 - Save the workflow file. With this, our basic setup is complete, and we can test.
 - All of this happens when a new PR is created which is defined in the first few lines of the file.
-
+- Run the test-workflow.yaml conf that has the k6 test defined in it on the kind clusteri.
 

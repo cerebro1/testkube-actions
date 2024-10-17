@@ -1,0 +1,26 @@
+kind: TestWorkflow
+apiVersion: testworkflows.testkube.io/v1
+metadata:
+  name: k6-check
+  namespace: testkube
+  labels:
+    docs: example
+spec:
+  content:
+    git:
+      uri: https://github.com/cerebro1/Testkube-Ephemeral-Environment
+      revision: main
+      paths:
+        - k6/testkube.js
+  container:
+    workingDir: /data/repo/k6/
+  steps:
+    - name: Run test
+      container:
+        image: grafana/k6:0.49.0
+      shell: |
+        k6 run testkube.js
+      artifacts:
+        workingDir: /data
+        paths:
+          - '*.html'
